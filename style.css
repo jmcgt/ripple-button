@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #302B2B;
+}
+
+.btn{
+    position: relative;
+    display: inline-block;
+    padding: 12px 40px;
+    color: white;
+    background: linear-gradient(90deg, rgba(67,67,177,1) 0%, rgba(0,198,255,1) 100%);
+    border-radius: 40px;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 18px;
+    letter-spacing: .2em;
+    overflow: hidden;
+}
+
+.btn span{
+    position: absolute;
+    background: white;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: animateRipples 1s linear;
+}
+
+@keyframes animateRipples{
+    0%{
+        width: 0;
+        height: 0;
+        opacity: 0.2;
+        border: 5px solid blue;
+    }
+    
+    100%{
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}
